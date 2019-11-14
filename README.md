@@ -1,8 +1,8 @@
-#How to Install the project
-## Clone the git Repository
+## How to Install the project
+## Clone the the Repository
 ## Go to the  directory
 # Run command
  npm install
-then
+#then
 npm start
 
