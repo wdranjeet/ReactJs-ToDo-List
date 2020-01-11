@@ -16,6 +16,9 @@ class App extends Component {
     currentState['ToDoList'].push(currentState['value'])
     this.setState({...this.state, ...currentState})
   }
+  removeTask = e => {
+    console.log(e);
+  }
   onInputChange = e => {
     this.setState({value: e.target.value});
   
@@ -25,7 +28,7 @@ class App extends Component {
       <div className="App">
        <Title title="My ToDo App"/>
        <ToDoForm onInputChange={this.onInputChange} value={this.state.value} addTask={this.AddNewTask} />
-       <ToDoList lists={this.state.ToDoList}></ToDoList>
+       <ToDoList lists={this.state.ToDoList} removeTask={this.removeTask}></ToDoList>
       </div>
     );
   }
